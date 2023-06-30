@@ -12,7 +12,10 @@ function getPlayerChoice()
     } else if (PlayerChoice.toLowerCase() === "paper"){
         return 'paper';
     }else if (PlayerChoice.toLowerCase() === "scissors"){
-        return 'scissors';}
+        return 'scissors';
+    }else {
+        console.log("ERROR");
+    }
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -41,10 +44,27 @@ function playRound(playerSelection, computerSelection) {
 
 
 function game (){
+    let c=0,p=0;
 for(let i=0;i<5;i++){
 computerSelection=getComputerChoice();
 playerSelection=getPlayerChoice();
 console.log(playRound(playerSelection, computerSelection));
+k=playRound(playerSelection, computerSelection);
+switch(k){
+    case 1:
+        p++;
+    break;
+    case 0:
+        c++;
+    break;
+}
+}
+if(p>c){
+    console.log("you won the whole game");
+}else if (c>p){
+    console.log(" computer won the whole game");
+}else {
+    console.log("It's a TIE");
 }
 }
 
