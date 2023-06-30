@@ -48,7 +48,6 @@ function game (){
 for(let i=0;i<5;i++){
 computerSelection=getComputerChoice();
 playerSelection=getPlayerChoice();
-console.log(playRound(playerSelection, computerSelection));
 k=playRound(playerSelection, computerSelection);
 switch(k){
     case 1:
